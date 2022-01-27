@@ -2,6 +2,7 @@ package com.sparta.vehicles;
 
 public class Dealership {
     public static void main(String[] args) {
+
         Vehicle renaultClio = new Vehicle("Renault", "Clio", "HGF4GH5GHD", "1.0L 3-Cylinder", "Blue", "Subcompact", 100, true);
 
         System.out.println(renaultClio);

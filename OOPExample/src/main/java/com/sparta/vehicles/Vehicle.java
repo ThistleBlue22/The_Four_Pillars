@@ -1,14 +1,26 @@
 package com.sparta.vehicles;
 
 public class Vehicle {
-    private String make;
-    private String model;
-    private String licencePlate;
-    private String engineSize;
-    private String colour;
-    private String type;
-    private int fuelLevel;
-    private boolean isMOTed;
+    final String make;
+    final String model;
+    final String licencePlate;
+    final String engineSize;
+    final String colour;
+    final String type;
+    final int fuelLevel;
+    final boolean isMOTed;
+
+    /**
+     *
+     * @param make holds the make of the car
+     * @param model holds the model of the car
+     * @param licencePlate holds the license plate of the car
+     * @param engineSize holds the engine size of the car
+     * @param colour holds the colour of the car
+     * @param type holds the type of the car
+     * @param fuelLevel holds the current fuel level of the car
+     * @param isMOTed holds the boolean value whether the car has passed its recent MOT
+     */
 
     public Vehicle(String make, String model, String licencePlate, String engineSize, String colour, String type, int fuelLevel, boolean isMOTed) {
         this.make = make;
@@ -23,7 +35,7 @@ public class Vehicle {
 
     public String isMOTValid() {
         String isMOTValid;
-     if (isMOTed()){
+     if (isMOTed){
          isMOTValid = "valid";
      }
      else{
@@ -32,76 +44,19 @@ public class Vehicle {
      return isMOTValid;
     }
 
+    /**
+     *
+     * @return Returns a concatenated String with the information about the car
+     */
+
     public String toString() {
         String carMOT = isMOTValid();
 
-        return "The car with make and model " + getMake() + " " + getModel() + " has an engine size of " + getEngineSize() +
-                " and has a fuel level of " + getFuelLevel() + "%. The car is MOT " + carMOT +
-                ". The colour of the car is " + getColour() + " and is a " + getType() + " type of car." +
-                " We have a car with the licence plate: " + getLicencePlate();
+        return "The car with make and model " + make + " " + model + " has an engine size of " + engineSize +
+                " and has a fuel level of " + fuelLevel + "%. The car is MOT " + carMOT +
+                ". The colour of the car is " + colour + " and is a " + type + " type of car." +
+                " We have a car with the licence plate: " + licencePlate;
     }
 
-    public String getMake() {
-        return make;
-    }
 
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getLicencePlate() {
-        return licencePlate;
-    }
-
-    public void setLicencePlate(String licencePlate) {
-        this.licencePlate = licencePlate;
-    }
-
-    public String getEngineSize() {
-        return engineSize;
-    }
-
-    public void setEngineSize(String engineSize) {
-        this.engineSize = engineSize;
-    }
-
-    public String getColour() {
-        return colour;
-    }
-
-    public void setColour(String colour) {
-        this.colour = colour;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public int getFuelLevel() {
-        return fuelLevel;
-    }
-
-    public void setFuelLevel(int fuelLevel) {
-        this.fuelLevel = fuelLevel;
-    }
-
-    public boolean isMOTed() {
-        return isMOTed;
-    }
-
-    public void setMOTed(boolean MOTed) {
-        isMOTed = MOTed;
-    }
 }
